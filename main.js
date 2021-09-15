@@ -24,16 +24,14 @@ function gotPoses(results)
    if(results.length > 0)
 {
    console.log(results)
-   noseX=results[0].pose.nose.x;
-   noseY=results[0].pose.nose.y;
-   console.log("nose x = " + result[0].pose.nose.x);
-   console.log("nose y = " + result[0].pose.nose.y);
+   noseX=results[0].pose.nose.x-15;
+   noseY=results[0].pose.nose.y-15;
+   console.log("nose x = " + noseX);
+   console.log("nose y = " + noseY);
  }
 }
 function draw() {
     image(video,0,0,300,300);
-    fill(255,0,0);
-    stroke(225,0,0);
     image(clown_nose, noseX, noseY, 30, 30);
 }
 
